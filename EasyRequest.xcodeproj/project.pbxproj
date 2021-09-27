@@ -13,9 +13,11 @@
 		A41D517D26FB9F2E005EB2E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41D517B26FB9F2E005EB2E3 /* Main.storyboard */; };
 		A41D517F26FB9F37005EB2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41D517E26FB9F37005EB2E3 /* Assets.xcassets */; };
 		A41D518226FB9F37005EB2E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41D518026FB9F37005EB2E3 /* LaunchScreen.storyboard */; };
+		CF873633E23E312164C4E2A7 /* Pods_EasyRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A553421CE7EB4C5D7A88A0AF /* Pods_EasyRequest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		849EC8016DA8E9E4BEEF172A /* Pods-EasyRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRequest.release.xcconfig"; path = "Target Support Files/Pods-EasyRequest/Pods-EasyRequest.release.xcconfig"; sourceTree = "<group>"; };
 		A41D517226FB9F2E005EB2E3 /* EasyRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41D517526FB9F2E005EB2E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41D517726FB9F2E005EB2E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		A41D517E26FB9F37005EB2E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41D518126FB9F37005EB2E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A41D518326FB9F37005EB2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A553421CE7EB4C5D7A88A0AF /* Pods_EasyRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5B4A081DE2429C1EC85FFB /* Pods-EasyRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRequest.debug.xcconfig"; path = "Target Support Files/Pods-EasyRequest/Pods-EasyRequest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF873633E23E312164C4E2A7 /* Pods_EasyRequest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				A41D517426FB9F2E005EB2E3 /* EasyRequest */,
 				A41D517326FB9F2E005EB2E3 /* Products */,
+				C4BAD7DCA7C04D40161AE09F /* Pods */,
+				E675FEF11BC0063757CAE874 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,57 @@
 		A41D517426FB9F2E005EB2E3 /* EasyRequest */ = {
 			isa = PBXGroup;
 			children = (
+				A4E924F126FE433C004BE118 /* Models */,
+				A4E924F026FE4335004BE118 /* Views */,
+				A4E924EF26FE432E004BE118 /* Controllers */,
 				A41D517526FB9F2E005EB2E3 /* AppDelegate.swift */,
 				A41D517726FB9F2E005EB2E3 /* SceneDelegate.swift */,
 				A41D517926FB9F2E005EB2E3 /* ViewController.swift */,
-				A41D517B26FB9F2E005EB2E3 /* Main.storyboard */,
 				A41D517E26FB9F37005EB2E3 /* Assets.xcassets */,
-				A41D518026FB9F37005EB2E3 /* LaunchScreen.storyboard */,
 				A41D518326FB9F37005EB2E3 /* Info.plist */,
 			);
 			path = EasyRequest;
+			sourceTree = "<group>";
+		};
+		A4E924EF26FE432E004BE118 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A4E924F026FE4335004BE118 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A41D518026FB9F37005EB2E3 /* LaunchScreen.storyboard */,
+				A41D517B26FB9F2E005EB2E3 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4E924F126FE433C004BE118 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4BAD7DCA7C04D40161AE09F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF5B4A081DE2429C1EC85FFB /* Pods-EasyRequest.debug.xcconfig */,
+				849EC8016DA8E9E4BEEF172A /* Pods-EasyRequest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E675FEF11BC0063757CAE874 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A553421CE7EB4C5D7A88A0AF /* Pods_EasyRequest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A41D518626FB9F37005EB2E3 /* Build configuration list for PBXNativeTarget "EasyRequest" */;
 			buildPhases = (
+				F26FF1F9A73DE973B5754271 /* [CP] Check Pods Manifest.lock */,
 				A41D516E26FB9F2D005EB2E3 /* Sources */,
 				A41D516F26FB9F2D005EB2E3 /* Frameworks */,
 				A41D517026FB9F2D005EB2E3 /* Resources */,
+				D56218793755A4453F637586 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +183,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D56218793755A4453F637586 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyRequest/Pods-EasyRequest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyRequest/Pods-EasyRequest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyRequest/Pods-EasyRequest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F26FF1F9A73DE973B5754271 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyRequest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A41D516E26FB9F2D005EB2E3 /* Sources */ = {
@@ -282,6 +375,7 @@
 		};
 		A41D518726FB9F37005EB2E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF5B4A081DE2429C1EC85FFB /* Pods-EasyRequest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +394,7 @@
 		};
 		A41D518826FB9F37005EB2E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849EC8016DA8E9E4BEEF172A /* Pods-EasyRequest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
