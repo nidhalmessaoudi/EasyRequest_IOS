@@ -120,6 +120,7 @@
                     <connections>
                         <outlet property="requestMethodPicker" destination="P5c-hJ-d6Z" id="ejb-X5-JNL"/>
                         <outlet property="requestUrlTextField" destination="blD-NO-una" id="oyk-Ms-j9F"/>
+                        <outlet property="requestUrlView" destination="i3R-ex-CAT" id="NnM-sf-kab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
