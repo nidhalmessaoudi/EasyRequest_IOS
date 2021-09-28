@@ -12,11 +12,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var requestMethodPicker: UIPickerView!
     @IBOutlet weak var requestUrlTextField: UITextField!
     @IBOutlet weak var requestUrlView: UIView!
+    @IBOutlet weak var sendButton: UIButton!
     
     let requestMethods = ["GET", "POST", "PATCH", "PUT", "DELETE"]
     var selectedMethod: String?
     
     var lastErrorLabel: UILabel?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        requestUrlTextField.borderStyle = UITextField.BorderStyle.roundedRect
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,32 +53,63 @@ class ViewController: UIViewController {
             return
         }
         
-        if isValidUrl(url: requestUrlTextFieldValue!) {
-            let url = URL(string: requestUrlTextFieldValue!)
-            var request = URLRequest(url: url!)
-            request.httpMethod = selectedMethod!
-            
-            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                guard let data = data,
-                    let response = response as? HTTPURLResponse,
-                    error == nil else {
-                        print("error", error ?? "Unknown error")
-                        return
-                }
-                
-                guard (200 ... 299) ~= response.statusCode else {
-                    print("statusCode should be 2xx, but is \(response.statusCode)")
-                    print("response = \(response)")
-                    return
-                }
-                
-                let responseString = String(data: data, encoding: .utf8)
-                print("responseString = \(responseString!)")
+        if !isValidUrl(url: requestUrlTextFieldValue!) {
+            renderError(withValue: "Invalid Url!")
+            return
+        }
+        
+        let url = URL(string: requestUrlTextFieldValue!)!
+        
+        if !url.absoluteString.contains("https") {
+            renderError(withValue: "Please use https!")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = selectedMethod!
+        
+        sendButton.setTitle("SENDING", for: .disabled)
+        sendButton.isEnabled = false
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                self.sendButton.isEnabled = true
             }
             
-            task.resume()
-        } else {
-            renderError(withValue: "Invalid Url!")
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                error == nil else {
+                    self.renderError(withValue: "An error was occured, please try again!")
+                    print("error", error ?? "Unknown error")
+                    return
+            }
+            
+            var responseString: String
+            
+            guard (200 ... 299) ~= response.statusCode else {
+                responseString = "statusCode should be 2xx, but is \(response.statusCode)"
+                self.renderResults(withData: responseString)
+                return
+            }
+
+            responseString = String(data: data, encoding: .utf8)!
+            
+            let jsonData = responseString.data(using: .utf8)!.prettyPrintedJSONString as String?
+            
+            print("responseString = \(responseString)")
+            
+            self.renderResults(withData: jsonData != nil ? jsonData! : responseString)
+            
+        }
+        
+        task.resume()
+    }
+    
+    func renderResults(withData data: String) {
+        DispatchQueue.main.async {
+            let resultsVC = ResultsViewController()
+            resultsVC.results = data
+            self.present(resultsVC, animated: true)
         }
     }
     

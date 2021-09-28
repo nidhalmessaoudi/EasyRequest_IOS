@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		A41D517D26FB9F2E005EB2E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41D517B26FB9F2E005EB2E3 /* Main.storyboard */; };
 		A41D517F26FB9F37005EB2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41D517E26FB9F37005EB2E3 /* Assets.xcassets */; };
 		A41D518226FB9F37005EB2E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41D518026FB9F37005EB2E3 /* LaunchScreen.storyboard */; };
+		A4A6D27827032B9C00E76742 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6D27727032B9C00E76742 /* ResultsViewController.swift */; };
+		A4A6D27A2703B79400E76742 /* PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6D2792703B79400E76742 /* PrettyJSON.swift */; };
+		A4A6D27C2703CBAB00E76742 /* AnimateUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6D27B2703CBAB00E76742 /* AnimateUIButton.swift */; };
 		CF873633E23E312164C4E2A7 /* Pods_EasyRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A553421CE7EB4C5D7A88A0AF /* Pods_EasyRequest.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		A41D517E26FB9F37005EB2E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41D518126FB9F37005EB2E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A41D518326FB9F37005EB2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4A6D27727032B9C00E76742 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		A4A6D2792703B79400E76742 /* PrettyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyJSON.swift; sourceTree = "<group>"; };
+		A4A6D27B2703CBAB00E76742 /* AnimateUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateUIButton.swift; sourceTree = "<group>"; };
 		A553421CE7EB4C5D7A88A0AF /* Pods_EasyRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5B4A081DE2429C1EC85FFB /* Pods-EasyRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRequest.debug.xcconfig"; path = "Target Support Files/Pods-EasyRequest/Pods-EasyRequest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +74,6 @@
 				A4E924EF26FE432E004BE118 /* Controllers */,
 				A41D517526FB9F2E005EB2E3 /* AppDelegate.swift */,
 				A41D517726FB9F2E005EB2E3 /* SceneDelegate.swift */,
-				A41D517926FB9F2E005EB2E3 /* ViewController.swift */,
 				A41D517E26FB9F37005EB2E3 /* Assets.xcassets */,
 				A41D518326FB9F37005EB2E3 /* Info.plist */,
 			);
@@ -78,6 +83,8 @@
 		A4E924EF26FE432E004BE118 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A41D517926FB9F2E005EB2E3 /* ViewController.swift */,
+				A4A6D27727032B9C00E76742 /* ResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 			children = (
 				A41D518026FB9F37005EB2E3 /* LaunchScreen.storyboard */,
 				A41D517B26FB9F2E005EB2E3 /* Main.storyboard */,
+				A4A6D27B2703CBAB00E76742 /* AnimateUIButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		A4E924F126FE433C004BE118 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A4A6D2792703B79400E76742 /* PrettyJSON.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,7 +113,6 @@
 				AF5B4A081DE2429C1EC85FFB /* Pods-EasyRequest.debug.xcconfig */,
 				849EC8016DA8E9E4BEEF172A /* Pods-EasyRequest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -231,9 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A6D27A2703B79400E76742 /* PrettyJSON.swift in Sources */,
 				A41D517A26FB9F2E005EB2E3 /* ViewController.swift in Sources */,
 				A41D517626FB9F2E005EB2E3 /* AppDelegate.swift in Sources */,
 				A41D517826FB9F2E005EB2E3 /* SceneDelegate.swift in Sources */,
+				A4A6D27827032B9C00E76742 /* ResultsViewController.swift in Sources */,
+				A4A6D27C2703CBAB00E76742 /* AnimateUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
