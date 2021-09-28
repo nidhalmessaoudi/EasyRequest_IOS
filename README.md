@@ -1,2 +1,2 @@
 # EasyRequest_IOS
-The native IOS App for Easy Request built with Swift.
+The native IOS App for EasyRequest built with Swift.
