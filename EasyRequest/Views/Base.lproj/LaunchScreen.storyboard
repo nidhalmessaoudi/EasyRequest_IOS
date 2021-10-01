@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EasyRequest_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="O8e-dD-7cH">
-                                <rect key="frame" x="40.666666666666657" y="281.66666666666669" width="333" height="333.00000000000006"/>
+                                <rect key="frame" x="123.66666666666667" y="364.66666666666669" width="166.66666666666663" height="166.66666666666669"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -36,7 +36,7 @@
     <resources>
         <image name="EasyRequest_Logo" width="166.66667175292969" height="166.66667175292969"/>
         <namedColor name="BackgroundColor">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
